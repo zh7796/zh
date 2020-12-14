@@ -3,10 +3,13 @@
     <header>
       <mt-header title="现场机械管理系统">
         <router-link
-        to=""
+          to=""
           slot="left"
         >
-          <i class="el-icon-arrow-left" @click="back"></i>
+          <i
+            class="el-icon-arrow-left"
+            @click="back"
+          ></i>
         </router-link>
         <mt-button slot="right">
           <i class="el-icon-bell"></i>
@@ -18,6 +21,11 @@
         type="primary"
         @click="add"
       >+</mt-button>
+      <button
+        type="primary"
+        class="dzzy"
+        @click='dzzy'
+      >吊装作业</button>
     </main>
   </div>
 </template>
@@ -31,14 +39,25 @@ export default {
         name: "AddFather",
       });
     },
-          back(){
-      this.$router.go(-1)
-  }
+    back() {
+      this.$router.go(-1);
+    },
+    dzzy(){
+      this.$router.push({
+        path:'HoistingOperation'
+      })
+    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.dzzy {
+  width: 70px;
+  height: 40px;
+  font-size: 16px;
+  margin-left: 100px;
+}
 .situ {
   width: 100%;
   height: 100%;
