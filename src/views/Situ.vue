@@ -2,10 +2,7 @@
   <div class="situ">
     <header>
       <mt-header title="现场机械管理系统">
-        <router-link
-        to=""
-          slot="left"
-        >
+        <router-link to="" slot="left">
           <i class="el-icon-arrow-left" @click="back"></i>
         </router-link>
         <mt-button slot="right">
@@ -14,10 +11,7 @@
       </mt-header>
     </header>
     <main>
-      <mt-button
-        type="primary"
-        @click="add"
-      >+</mt-button>
+      <mt-button type="primary" @click="add">+</mt-button>
     </main>
   </div>
 </template>
@@ -31,9 +25,9 @@ export default {
         name: "AddFather",
       });
     },
-          back(){
-      this.$router.go(-1)
-  }
+    back() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>

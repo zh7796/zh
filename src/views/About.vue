@@ -2,11 +2,7 @@
   <div class="about">
     <header>
       <mt-header title="组织结构">
-        <router-link
-          to=""
-          
-          slot="left"
-        >
+        <router-link to="" slot="left">
           <i class="el-icon-arrow-left" @click="back"></i>
         </router-link>
         <mt-button slot="right">
@@ -16,53 +12,32 @@
     </header>
     <main>
       <div class="search">
-        <mt-search
-          cancel-text="取消"
-          placeholder="按名称过滤"
-        >
-        </mt-search>
+        <mt-search cancel-text="取消" placeholder="按名称过滤"> </mt-search>
       </div>
-      <div
-        class="content"
-        ref="content"
-      >
+      <div class="content" ref="content">
         <div class="scroll">
           <div class="childs">
-            <i
-              class="el-icon-caret-bottom"
-              v-show="!iconFlag"
-            ></i>
-            <i
-              class="el-icon-caret-top"
-              v-show="iconFlag"
-            ></i>
-            <span @click="father">
-              地铁12号线建设工程
-            </span>
+            <i class="el-icon-caret-bottom" v-show="!iconFlag"></i>
+            <i class="el-icon-caret-top" v-show="iconFlag"></i>
+            <span @click="father"> 地铁12号线建设工程 </span>
             <div
               class="child"
               v-show="!iconFlag"
-              v-for="(item,index) in tree"
+              v-for="(item, index) in tree"
               :key="index"
             >
-              <i
-                class="el-icon-caret-bottom"
-                v-show="item.canSelect"
-              ></i>
-              <i
-                class="el-icon-caret-top"
-                v-show="!item.canSelect"
-              ></i>
+              <i class="el-icon-caret-bottom" v-show="item.canSelect"></i>
+              <i class="el-icon-caret-top" v-show="!item.canSelect"></i>
 
-              <span @click="child(item)">{{item.name}}</span>
+              <span @click="child(item)">{{ item.name }}</span>
               <div
                 class="children"
-                v-for="(items,ind) in item.childNodes"
+                v-for="(items, ind) in item.childNodes"
                 :key="ind"
                 v-show="item.canSelect"
                 @click="children(items)"
               >
-                {{items.name}}
+                {{ items.name }}
               </div>
             </div>
           </div>

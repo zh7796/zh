@@ -2,10 +2,7 @@
   <div class="home">
     <header>
       <mt-header title="现场机械管理系统">
-        <router-link
-          slot="left"
-        to=""
-        >
+        <router-link slot="left" to="">
           <i class="el-icon-s-operation"></i>
         </router-link>
         <mt-button slot="right">
@@ -14,86 +11,50 @@
       </mt-header>
     </header>
     <main>
-      <div
-        class="nav"
-        @click="nav"
-      >
+      <div class="nav" @click="nav">
         地铁12号线建设工程
-        <i class="
-el-icon-arrow-down"></i>
+        <i class="el-icon-arrow-down"></i>
       </div>
       <div class="main-top">
-        <div>
-          待办事项
-        </div>
-        <div class="top-red">
-          待审核机械40
-        </div>
+        <div>待办事项</div>
+        <div class="top-red">待审核机械40</div>
       </div>
       <div class="main-center">
-        <div class="center-top">
-          最新登记机械
-        </div>
-        <div
-          class="center-childs"
-          ref="childs"
-        >
+        <div class="center-top">最新登记机械</div>
+        <div class="center-childs" ref="childs">
           <div class="scroll">
             <div
               class="center-child"
-              v-for="(item,index) in mechanical"
+              v-for="(item, index) in mechanical"
               :key="index"
             >
               <div class="child-t">
-                <div class="t-btn">
-                  使用中
+                <div class="t-btn">使用中</div>
+                <div class="t-txt">
+                  {{ item.machineryTypeName }}
                 </div>
                 <div class="t-txt">
-                  {{item.machineryTypeName}}
-                </div>
-                <div class="t-txt">
-                  {{item.specification}}
+                  {{ item.specification }}
                 </div>
               </div>
               <div class="child-c">
                 <div class="c-txt">
-                  {{item.projectEquipmentCode}}
+                  {{ item.projectEquipmentCode }}
                 </div>
-                <div
-                  class="c-red"
-                  v-if='item.remark ==="特"'
-                >
-                  特种
-                </div>
-                <div
-                  class="c-p"
-                  v-else-if='item.remark ==="大"'
-                >
-                  大型
-                </div>
-                <div
-                  class="c-else"
-                  v-else
-                >
-                  <div class="c-red">
-                    特种
-                  </div>
-                  <div class="c-p">
-                    大型
-                  </div>
+                <div class="c-red" v-if="item.remark === '特'">特种</div>
+                <div class="c-p" v-else-if="item.remark === '大'">大型</div>
+                <div class="c-else" v-else>
+                  <div class="c-red">特种</div>
+                  <div class="c-p">大型</div>
                 </div>
 
-                <div class="c-c">
-                  信息未完善
-                </div>
+                <div class="c-c">信息未完善</div>
               </div>
               <div class="child-b">
                 <div>
-                  {{item.projectName}}
+                  {{ item.projectName }}
                 </div>
-                <div>
-                  进场日期：{{item.actualApproachDate}}
-                </div>
+                <div>进场日期：{{ item.actualApproachDate }}</div>
               </div>
             </div>
           </div>
@@ -119,7 +80,7 @@ export default {
     this.$nextTick(() => {
       this.scroll = new BScroll(this.$refs.childs);
     });
-        console.log(this.$route.params);
+    console.log(this.$route.params);
   },
   methods: {
     nav() {
@@ -127,9 +88,9 @@ export default {
         path: "/about",
       });
     },
-    back(){
-      this.$router.go(-1)
-    }
+    back() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>
