@@ -90,9 +90,7 @@ export default {
         name: "AddFather",
       });
     },
-    back() {
-      this.$router.go(-1);
-    },
+
     //张浩李涛按钮
     zhLt() {
       this.show = true;
