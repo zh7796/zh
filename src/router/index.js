@@ -25,6 +25,11 @@ const routes = [{
     component: () => import( /* webpackChunkName: "about" */ '../views/Situ.vue')
   }, 
   {
+    path:'/HoistingOperation',
+    name:'HoistingOperation',
+    component:HoistingOperation,
+  } ,
+  {
     path: '/addfather',
     name: 'AddFather',
     component: () => import( /* webpackChunkName: "about" */ '../views/Add/AddFather.vue'),
@@ -49,6 +54,11 @@ const routes = [{
       path: '/model',
       name: 'Model',
       component: () => import('../views/Add/Model.vue'),
+    },
+    {
+      path: '/every',
+      name: 'Every',
+      component: () => import('../views/Add/Every.vue'),
     }, ]
   }
 ]

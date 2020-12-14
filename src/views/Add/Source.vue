@@ -2,14 +2,8 @@
   <div class="source">
     <header>
       <mt-header title="组织结构">
-        <router-link
-          to=""
-          slot="left"
-        >
-          <i
-            class="el-icon-arrow-left"
-            @click="back"
-          ></i>
+        <router-link to="" slot="left">
+          <i class="el-icon-arrow-left" @click="back"></i>
         </router-link>
         <mt-button slot="right">
           <i class="el-icon-bell"></i>
@@ -18,42 +12,29 @@
     </header>
     <main>
       <div class="search">
-        <mt-search
-          cancel-text="取消"
-          placeholder="按名称过滤"
-        >
-        </mt-search>
+        <mt-search cancel-text="取消" placeholder="按名称过滤"> </mt-search>
       </div>
-      <div
-        class="content"
-        ref="content"
-      >
+      <div class="content" ref="content">
         <div class="scroll">
           <div class="childs">
             <div
               class="child"
               v-show="!iconFlag"
-              v-for="(item,index) in tree"
+              v-for="(item, index) in tree"
               :key="index"
             >
-              <i
-                class="el-icon-caret-bottom"
-                v-show="item.isDelete"
-              ></i>
-              <i
-                class="el-icon-caret-top"
-                v-show="!item.isDelete"
-              ></i>
+              <i class="el-icon-caret-bottom" v-show="item.isDelete"></i>
+              <i class="el-icon-caret-top" v-show="!item.isDelete"></i>
 
-              <span @click="child(item)">{{item.name}}</span>
+              <span @click="child(item)">{{ item.name }}</span>
               <div
                 class="children"
-                v-for="(items,ind) in item.children"
+                v-for="(items, ind) in item.children"
                 :key="ind"
                 v-show="item.isDelete"
                 @click="children(items)"
               >
-                {{items.name}}
+                {{ items.name }}
               </div>
             </div>
           </div>
@@ -89,14 +70,14 @@ export default {
     }
   },
   methods: {
-
     child(val) {
       val.isDelete = !val.isDelete;
     },
     children(val) {
       this.$router.push({
-          name:'Add',params:{Sourceval:val}
-      })
+        name: "Add",
+        params: { Sourceval: val },
+      });
     },
     back() {
       console.log(1);
@@ -138,7 +119,7 @@ export default {
       height: 47px;
       overflow: hidden;
       .mint-search {
-          height: 47px;
+        height: 47px;
       }
       .mintui {
         font-size: 15px;
