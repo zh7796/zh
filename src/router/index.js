@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import HoistingOperation from '@/views/Add/HoistingOperation.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -23,7 +23,16 @@ const routes = [{
     path: '/situ',
     name: 'Situ',
     component: () => import( /* webpackChunkName: "about" */ '../views/Situ.vue')
+<<<<<<< HEAD
   }, 
+=======
+  },
+  {
+    path:'/HoistingOperation',
+    name:'HoistingOperation',
+    component:HoistingOperation,
+  } ,
+>>>>>>> 20a47a4d195cc3673b1331a32a1594cbb93cad05
   {
     path: '/addfather',
     name: 'AddFather',
