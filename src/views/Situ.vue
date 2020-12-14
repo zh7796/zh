@@ -35,7 +35,6 @@
         @click='dzzy'
       >吊装作业</button>
 
-      <mt-button type="primary" @click="add">+</mt-button>
       <!-- 弹出层 -->
       <van-button is-link @click="zhLt">日常检查</van-button>
       <van-popup v-model="show" position="right" :style="{ height: '100%' }">
@@ -90,9 +89,7 @@ export default {
         name: "AddFather",
       });
     },
-    back() {
-      this.$router.go(-1);
-    },
+
     //张浩李涛按钮
     zhLt() {
       this.show = true;
