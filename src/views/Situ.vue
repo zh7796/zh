@@ -6,14 +6,6 @@
         <router-link to="" slot="left">
           <i class="el-icon-arrow-left" @click="back"></i>
 
-        <router-link
-          to=""
-          slot="left"
-        >
-          <i
-            class="el-icon-arrow-left"
-            @click="back"
-          ></i>
         </router-link>
         <mt-button slot="right">
           <i class="el-icon-bell"></i>
