@@ -23,16 +23,7 @@ const routes = [{
     path: '/situ',
     name: 'Situ',
     component: () => import( /* webpackChunkName: "about" */ '../views/Situ.vue')
-<<<<<<< HEAD
   }, 
-=======
-  },
-  {
-    path:'/HoistingOperation',
-    name:'HoistingOperation',
-    component:HoistingOperation,
-  } ,
->>>>>>> 20a47a4d195cc3673b1331a32a1594cbb93cad05
   {
     path: '/addfather',
     name: 'AddFather',
