@@ -24,10 +24,10 @@
         @click="add"
       >+</mt-button>
 
-      <mt-button
+      <!-- <mt-button
         type="primary"
         @click="zhLt"
-      >张浩李涛</mt-button>
+      >张浩李涛</mt-button> -->
 
       <button
         type="primary"
@@ -35,7 +35,7 @@
         @click='dzzy'
       >吊装作业</button>
 
-      <mt-button type="primary" @click="add">+</mt-button>
+      <!-- <mt-button type="primary" @click="add">+</mt-button> -->
       <!-- 弹出层 -->
       <van-button is-link @click="zhLt">日常检查</van-button>
       <van-popup v-model="show" position="right" :style="{ height: '100%' }">
@@ -71,7 +71,7 @@
           <button>默认</button>
         </div>
       </van-popup>
-      <button type="primary" class="dzzy" @click="dzzy">吊装作业</button>
+      <!-- <button type="primary" class="dzzy" @click="dzzy">吊装作业</button> -->
     </main>
   </div>
 </template>
