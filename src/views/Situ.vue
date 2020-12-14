@@ -18,6 +18,10 @@
         type="primary"
         @click="add"
       >+</mt-button>
+      <mt-button
+        type="primary"
+        @click="zhLt"
+      >张浩李涛</mt-button>
     </main>
   </div>
 </template>
@@ -33,6 +37,10 @@ export default {
     },
           back(){
       this.$router.go(-1)
+  },
+  //张浩李涛按钮
+  zhLt(){
+
   }
   },
 };
