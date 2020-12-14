@@ -23,7 +23,7 @@ const routes = [{
     path: '/situ',
     name: 'Situ',
     component: () => import( /* webpackChunkName: "about" */ '../views/Situ.vue')
-  }, ,
+  }, 
   {
     path: '/addfather',
     name: 'AddFather',
