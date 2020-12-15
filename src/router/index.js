@@ -50,11 +50,11 @@ const routes = [{
       name: 'Model',
       component: () => import('../views/Add/Model.vue'),
     },
-    {
-      path: '/every',
-      name: 'Every',
-      component: () => import('../views/Add/Every.vue'),
-    }, ]
+      {
+        path: '/every',
+        name: 'Every',
+        component: () => import('../views/Add/Every.vue'),
+      }, ]
   }
 ]
 

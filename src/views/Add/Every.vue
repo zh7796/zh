@@ -98,7 +98,10 @@ export default {
     return {};
   },
   methods: {
-    back() {},
+    back() {
+      console.log(111);
+      this.$router.go(-1)
+    },
   },
 };
 </script>
