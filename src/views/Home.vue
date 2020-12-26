@@ -15,7 +15,7 @@
         class="nav"
         @click="nav"
       >
-        地铁12号线建设工程
+        地铁12号线建设工程11
         <i class="
 el-icon-arrow-down"></i>
       </div>
@@ -89,7 +89,7 @@ export default {
   methods: {
     nav() {
       this.$router.push({
-        path: "/about",
+        path: `/about/${'1111'}`,
       });
     },
     back() {

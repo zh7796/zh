@@ -59,6 +59,7 @@ export default {
     };
   },
   async mounted() {
+    console.log(this.$route)
     Indicator.open("加载中...");
     let res = await getTree();
     this.tree = res.result.childNodes[0].childNodes;
