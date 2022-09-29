@@ -2,7 +2,6 @@
   <div id="app">
     <router-view />
     <div>123sdf</div>
-    <span>abc</span>
     <span>qwe</span>
     <span>哈哈</span>
   </div>
