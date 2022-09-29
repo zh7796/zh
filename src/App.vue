@@ -4,6 +4,9 @@
     <div>123</div>
     <div>12ddd3</div>
     <div>123sdf</div>
+    <span>abc</span>
+    <span>qwe</span>
+    <span>哈哈</span>
   </div>
 </template>
 
