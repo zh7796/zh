@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <router-view />
-    <div>12ddd3</div>
     <div>123sdf</div>
     <span>abc</span>
     <span>qwe</span>
