@@ -3,7 +3,6 @@
     <router-view />
     <div>123sdf</div>
     <span>qwe</span>
-    <span>哈哈</span>
   </div>
 </template>
 
